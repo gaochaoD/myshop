@@ -1,10 +1,10 @@
-package com.nicholas.common;
+package com.nicholas.product;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CommonApplicationTests {
+class ProductApplicationTests {
 
     @Test
     void contextLoads() {
