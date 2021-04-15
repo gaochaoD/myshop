@@ -16,7 +16,7 @@ import java.util.Date;
  */
 
 @Data
-public class Product {
+public class ProductModel {
 
     /**
      * 商品主键

@@ -4,6 +4,8 @@ package com.nicholas.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.nicholas.entity.Product;
 
+import java.util.List;
+
 /**
  * @Description: 商品接口
  * @Author: denggc3
@@ -15,6 +17,8 @@ import com.nicholas.entity.Product;
  */
 
 public interface IProductService extends IService<Product> {
+
+    List<Product> getAll();
 
 
 }

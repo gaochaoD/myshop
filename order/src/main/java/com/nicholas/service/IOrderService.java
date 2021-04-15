@@ -3,7 +3,6 @@ package com.nicholas.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.nicholas.entity.Order;
-import com.nicholas.model.Product;
 
 /**
  * @Description: 商品接口

@@ -3,6 +3,10 @@ package com.nicholas.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.nicholas.entity.Product;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 /**
  * @Description: 商品mapper
@@ -16,5 +20,8 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface IProductMapper extends BaseMapper<Product> {
+
+    List<Product> getAll();
+
 
 }

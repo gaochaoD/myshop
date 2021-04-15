@@ -1,6 +1,14 @@
 server:
   port: 11001
 
+eureka:
+  instance:
+    hostname: localhost
+    eureka-server-port: 11000
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.eureka-server-port}/eureka/
+
 
 
 spring:
@@ -12,9 +20,24 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: 123456
-
+  cache:
+    ehcache:
+      config: classpath:/product_ehcache.xml
+  redis:
+    database: 0
+    timeout: 3600
+    host: 39.104.49.76
+    password: test123
+    port: 6379
+    jedis:
+      pool:
+        min-idle: 0
+        max-wait: 3600
+        max-active: 8
+        max-idle: 8
 
 
 mybatis-plus:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location: classpath:/mybatis/mybatis-config.xml
+

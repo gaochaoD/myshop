@@ -19,57 +19,55 @@ import java.util.Date;
 
 @Data
 public class Order {
-
     /**
-     * 商品主键
+     * 订单id
      */
-    @TableId(value = "id",type = IdType.AUTO)
-    private int id;
+    @TableId(value = "orderId",type = IdType.AUTO)
+    private int orderId;
     /**
-     * 商品类别id
+     * 支付金额
      */
-    private int productTypeId;
-    /**
-     * 商品标题
-     */
-    private String productTitle;
-    /**
-     * 商品价格
-     */
-    private BigDecimal productPrice;
-    /**
-     * 商品图片地址
-     */
-    private String productImgUrl;
-    /**
-     * 商品状态  1：未上架   2：上架中；3：已上架；4：上架失败
-     */
-    private int productStatus;
-    /**
-     * 商家id
-     */
-    private int storeId;
+    private int payAmount;
     /**
      * 创建时间
      */
-    private Date createTime;
+    private int createTime;
     /**
-     * 审核时间
+     * 支付时间
      */
-    private Date auditTime;
+    private int payTime;
     /**
-     * 商品审核状态   1：待审核；2：审核中；3：审核通过；4：审核不通过；
+     * 用户id
      */
-    private int auditState;
+    private int userId;
     /**
-     * 库存数量
+     * 支付状态 1：未支付；2：已支付；3：已退款
      */
-    private int stockNum;
+    private int payState;
     /**
-     * 销售数量
+     * 收货人地址
      */
-    private int saleNum;
-
+    private int cosigneeAddr;
+    /**
+     * 收货人电话
+     */
+    private int cosigneePhone;
+    /**
+     * 收货人姓名
+     */
+    private int cosigneeName;
+    /**
+     * 交易流水号
+     */
+    private int tradeNumber;
+    /**
+     * 支付类型
+     */
+    private int payType;
+    /**
+     * 订单状态
+     */
+    private int orderState;
 
 
 }

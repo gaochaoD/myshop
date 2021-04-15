@@ -1,6 +1,14 @@
 server:
   port: 11002
 
+eureka:
+  instance:
+    hostname: localhost
+    eureka-server-port: 11000
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.eureka-server-port}/eureka/
+
 
 
 spring:
